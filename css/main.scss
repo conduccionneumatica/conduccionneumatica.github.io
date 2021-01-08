@@ -17,9 +17,12 @@ html {
 }
 
 body {
+  --color-bg: #{$COLOR-BACKGROUND-DARK};
+  &.manual { --color-bg: #{$COLOR-BACKGROUND-LIGHT}; }
+
   margin: 0 auto;
   padding: 0;
-  background-color: $COLOR-BACKGROUND-DARK;
+  background-color: var(--color-bg);
   color: $COLOR-TEXT;
   font-family: $FONT-TEXT;
   font-weight: 300;
@@ -49,13 +52,12 @@ a {
   width: 100vw;
   min-height: 100vh;
   border: 0;
-  padding: 12vh 4vw 12vh;
-  background-color: $COLOR-BACKGROUND-DARK;
+  padding: 0 4vw;
+  background-color: var(--color-bg);
   box-sizing: border-box;
   text-align: center;
 
   &.manual {
-    background-color: $COLOR-BACKGROUND-LIGHT;
     color: $COLOR-WHITE;
     a { color: $COLOR-WHITE; }
   }
@@ -63,6 +65,10 @@ a {
   .logo-mincul-wrapper {
     width: 20%;
     margin: 48px auto;
+
+    @include media-query(MOBILE) {
+      width: 40%;
+    }
 
     .logo-mincul {
       width: 100%;
@@ -83,16 +89,12 @@ a {
   width: 100%;
   height: 8vh;
   padding: 2vh 2vw;
-  background-color: $COLOR-BACKGROUND-DARK;
   box-sizing: border-box;
-
-  border: 1px #f00 solid;
+  z-index: 10;
 
   &.manual {
-    background-color: $COLOR-BACKGROUND-LIGHT;
     color: $COLOR-WHITE;
     a { color: $COLOR-WHITE; }
-
     .content-footer-right-item.manual {
       color: $COLOR-BACKGROUND-DARK;
     }
@@ -172,21 +174,21 @@ a {
 
 .frame-wrapper {
   width: 100vw;
-  height: 98vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   position: fixed;
   top: 0;
   z-index: 4;
-  pointer-events: none;
 
   .frame-top {
-    top: 0;
     width: 100%;
     padding-bottom: 8%;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100%;
+    background-color: var(--color-bg);
+
     background-image: url({{ site.baseurl }}/images/frame-top-L.png);
 
     @include media-query(TABLET) {
@@ -215,12 +217,13 @@ a {
   }
 
   .frame-bottom {
-    bottom: 0;
     width: 100%;
     padding-bottom: 8%;
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100%;
+    background-color: var(--color-bg);
+
     background-image: url({{ site.baseurl }}/images/frame-bottom-L.png);
 
     @include media-query(TABLET) {
@@ -230,5 +233,11 @@ a {
       padding-bottom: 10.68%;
       background-image: url({{ site.baseurl }}/images/frame-bottom-S.png);
     }
+  }
+
+  .frame-bottom-background {
+    width: 100%;
+    height: 3vh;
+    background-color: var(--color-bg);
   }
 }

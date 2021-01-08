@@ -6,9 +6,9 @@
   <head>
     {% include head.html %}
   </head>
-  <body>
+  <body class="{{ slug }}">
     {% include frame.html %}
-    <div class="page-wrapper {{ slug }}">
+    <div id="my-page-wrapper" class="page-wrapper {{ slug }}">
       <div class="content-top">
         <div class="video"></div>
         <div class="content-text">
@@ -29,4 +29,5 @@
       </div>
     </div>
   </body>
+  <script type='text/javascript' src="{{ site.baseurl }}/js/content.js"></script>
 </html>
