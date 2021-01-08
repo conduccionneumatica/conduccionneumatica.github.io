@@ -1,0 +1,23 @@
+$FONT-TEXT: 'PT Sans', sans-serif;
+
+$COLOR-BACKGROUND-DARK: #000000;
+$COLOR-BACKGROUND-LIGHT: #BFC3C4;
+$COLOR-RED: #83152D;
+$COLOR-BLUE: #2E5B6D;
+$COLOR-TEXT: #A8A3A3;
+
+$COLOR-LINK: $COLOR-TEXT;
+$COLOR-LINK-HOVER: $COLOR-TEXT;
+
+$FONT-SIZE-DESKTOP: 16px;
+$FONT-SIZE-MOBILE: 14px;
+
+$TRANSITION-PERIOD: 0.1s;
+
+$DESKTOP-WIDTH-MIN: 900px;
+
+@mixin media-query($canvas) {
+  @if $canvas == MOBILE {
+    @media only screen and (max-width: $DESKTOP-WIDTH-MIN) { @content; }
+  }
+}

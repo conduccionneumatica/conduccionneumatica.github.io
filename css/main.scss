@@ -1,0 +1,117 @@
+---
+---
+
+@import 'constants';
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $FONT-SIZE-DESKTOP;
+  margin: 0;
+  padding: 0;
+
+  @include media-query(MOBILE) {
+    font-size: $FONT-SIZE-MOBILE;
+  }
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  background-color: $COLOR-BACKGROUND-DARK;
+  color: $COLOR-TEXT;
+  font-family: $FONT-TEXT;
+  font-weight: 300;
+}
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+s { text-decoration: line-through; }
+
+a {
+  color: $COLOR-LINK;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color $TRANSITION-PERIOD linear;
+
+  &:visited {
+    color: $COLOR-LINK;
+  }
+
+  &:hover {
+    color: $COLOR-LINK-HOVER;
+  }
+}
+
+.home-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: $COLOR-BACKGROUND-DARK;
+}
+
+
+
+.content-footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .content-footer-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 50%;
+
+    &.info {
+      color: $COLOR-TEXT;
+    }
+    &.este, &.oeste, &.cielo, &.suelo {
+      color: $COLOR-RED;
+    }
+
+    .content-footer-left-title {
+      padding: 0 12px;
+      text-transform: uppercase;
+      &.este::before { content: "este"; }
+      &.oeste::before { content: "oeste"; }
+      &.cielo::before { content: "cielo"; }
+      &.suelo::before { content: "suelo"; }
+    }
+
+    .content-footer-left-time {
+      padding: 0 12px;
+      &.este::before { content: "abierto de 04:00 a 10:00 GMT-5"; }
+      &.oeste::before { content: "abierto de 16:00 a 22:00 GMT-5"; }
+      &.cielo::before { content: "abierto de 22:00 a 04:00 GMT-5"; }
+      &.suelo::before { content: "abierto de 10:00 a 16:00 GMT-5"; }
+    }
+  }
+
+  .content-footer-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 50%;
+
+    .content-footer-right-item {
+      width: 20%;
+      padding: 0 12px;
+      text-align: center;
+
+      &.plus::before { content: "+"; }
+      &.plus:hover::before { content: "información & créditos"; }
+
+      &.manual::before {
+        content: "manual del aire";
+        text-transform: uppercase;
+      }
+
+      &.manual:hover::before {
+        content: "publicación impresa";
+        text-transform: none;
+      }
+    }
+  }
+}

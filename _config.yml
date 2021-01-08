@@ -1,0 +1,14 @@
+# Site
+title: 'Conducción Neumática'
+subtitle: ''
+keywords: 'art, arte, respiración'
+
+# URL
+url: 'https://t.conduccionneumatica.org'
+baseurl: ''
+include: ['_pages']
+
+# Build settings
+markdown: kramdown
+port: 6886
+future: false
