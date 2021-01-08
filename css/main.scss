@@ -56,13 +56,13 @@ a {
 
   &.manual {
     background-color: $COLOR-BACKGROUND-LIGHT;
-    color: $COLOR-BACKGROUND-DARK;
-    a { color: $COLOR-BACKGROUND-DARK; }
+    color: $COLOR-WHITE;
+    a { color: $COLOR-WHITE; }
   }
 
   .logo-mincul-wrapper {
     width: 20%;
-    margin: 0 auto;
+    margin: 48px auto;
 
     .logo-mincul {
       width: 100%;
@@ -90,8 +90,12 @@ a {
 
   &.manual {
     background-color: $COLOR-BACKGROUND-LIGHT;
-    color: $COLOR-BACKGROUND-DARK;
-    a { color: $COLOR-BACKGROUND-DARK; }
+    color: $COLOR-WHITE;
+    a { color: $COLOR-WHITE; }
+
+    .content-footer-right-item.manual {
+      color: $COLOR-BACKGROUND-DARK;
+    }
   }
 
   .content-footer-left {
