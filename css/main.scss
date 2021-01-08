@@ -81,8 +81,12 @@ a {
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding: 12px 0;
+  height: 8vh;
+  padding: 2vh 2vw;
   background-color: $COLOR-BACKGROUND-DARK;
+  box-sizing: border-box;
+
+  border: 1px #f00 solid;
 
   &.manual {
     background-color: $COLOR-BACKGROUND-LIGHT;
@@ -164,7 +168,7 @@ a {
 
 .frame-wrapper {
   width: 100vw;
-  height: 96vh;
+  height: 98vh;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -175,11 +179,19 @@ a {
   .frame-top {
     top: 0;
     width: 100%;
-    padding-bottom: 15.625%;
+    padding-bottom: 8%;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100%;
-    background-image: url({{ site.baseurl }}/images/frame-top.png);
+    background-image: url({{ site.baseurl }}/images/frame-top-L.png);
+
+    @include media-query(TABLET) {
+      background-image: url({{ site.baseurl }}/images/frame-top-M.png);
+    }
+    @include media-query(MOBILE) {
+      padding-bottom: 10.68%;
+      background-image: url({{ site.baseurl }}/images/frame-top-S.png);
+    }
   }
 
   .frame-middle {
@@ -188,16 +200,31 @@ a {
     background-repeat: repeat-y;
     background-position: center;
     background-size: 100%;
-    background-image: url({{ site.baseurl }}/images/frame-middle.png);
+    background-image: url({{ site.baseurl }}/images/frame-middle-L.png);
+
+    @include media-query(TABLET) {
+      background-image: url({{ site.baseurl }}/images/frame-middle-M.png);
+    }
+    @include media-query(MOBILE) {
+      background-image: url({{ site.baseurl }}/images/frame-middle-S.png);
+    }
   }
 
   .frame-bottom {
     bottom: 0;
     width: 100%;
-    padding-bottom: 15.625%;
+    padding-bottom: 8%;
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100%;
-    background-image: url({{ site.baseurl }}/images/frame-bottom.png);
+    background-image: url({{ site.baseurl }}/images/frame-bottom-L.png);
+
+    @include media-query(TABLET) {
+      background-image: url({{ site.baseurl }}/images/frame-bottom-M.png);
+    }
+    @include media-query(MOBILE) {
+      padding-bottom: 10.68%;
+      background-image: url({{ site.baseurl }}/images/frame-bottom-S.png);
+    }
   }
 }

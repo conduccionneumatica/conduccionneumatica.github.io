@@ -14,10 +14,14 @@ $FONT-SIZE-MOBILE: 14px;
 
 $TRANSITION-PERIOD: 0.1s;
 
-$DESKTOP-WIDTH-MIN: 900px;
+$DESKTOP-WIDTH-MIN: 800px;
+$TABLET-WIDTH-MIN: 1000px;
 
 @mixin media-query($canvas) {
   @if $canvas == MOBILE {
     @media only screen and (max-width: $DESKTOP-WIDTH-MIN) { @content; }
+  }
+  @else if $canvas == TABLET {
+   @media only screen and (min-width: $TABLET-WIDTH-MIN) { @content; }
   }
 }
