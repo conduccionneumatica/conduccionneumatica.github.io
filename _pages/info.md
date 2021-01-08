@@ -7,7 +7,7 @@ La Conducción Neumática es un proyecto multi-medios y colectivo de acciones a�
 
 Es creada y dirigida por Genietta Varsi, quien desde una percepción escultórica investiga cómo la materia (los cuerpos) modelan y transforman el entorno con sus comportamientos, y viceversa.
 
-<div class="logo">LOGO</div>
+<div class="logo-mincul-wrapper"><div class="logo-mincul"></div></div>
 
 **INTEGRANTES DEL PROYECTO**
 

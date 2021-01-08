@@ -1,27 +1,31 @@
 <!DOCTYPE html>
+
+{% assign slug = page.permalink | replace:'/','' %}
+
 <html>
   <head>
     {% include head.html %}
   </head>
   <body>
-    <div class="content-wrapper">
+    {% include frame.html %}
+    <div class="page-wrapper {{ slug }}">
       <div class="content-top">
         <div class="video"></div>
         <div class="content-text">
           {{ content }}
         </div>
       </div>
+    </div>
 
-      <div class="content-footer">
-        <div class="content-footer-left {{ page.permalink | replace:'/','' }}">
-          <div class="content-footer-left-title {{ page.permalink | replace:'/','' }}"></div>
-          <div class="content-footer-left-time {{ page.permalink | replace:'/','' }}"></div>
-        </div>
+    <div class="content-footer {{ slug }}">
+      <div class="content-footer-left {{ slug }}">
+        <div class="content-footer-left-title {{ slug }}"></div>
+        <div class="content-footer-left-time {{ slug }}"></div>
+      </div>
 
-        <div class="content-footer-right">
-          <div class="content-footer-right-item plus"></div>
-          <div class="content-footer-right-item manual"></div>
-        </div>
+      <div class="content-footer-right">
+        <a href="{{ site.baseurl}}/info/" class="content-footer-right-item plus"></a>
+        <a href="{{ site.baseurl}}/manual/" class="content-footer-right-item manual"></a>
       </div>
     </div>
   </body>

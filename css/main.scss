@@ -9,6 +9,7 @@ html {
   font-size: $FONT-SIZE-DESKTOP;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   @include media-query(MOBILE) {
     font-size: $FONT-SIZE-MOBILE;
@@ -16,14 +17,13 @@ html {
 }
 
 body {
-  position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 100%;
   background-color: $COLOR-BACKGROUND-DARK;
   color: $COLOR-TEXT;
   font-family: $FONT-TEXT;
   font-weight: 300;
+  box-sizing: border-box;
 }
 
 strong { font-weight: bold; }
@@ -45,23 +45,56 @@ a {
   }
 }
 
-.home-wrapper {
+.page-wrapper {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  border: 0;
+  padding: 12vh 4vw 12vh;
   background-color: $COLOR-BACKGROUND-DARK;
+  box-sizing: border-box;
+  text-align: center;
+
+  &.manual {
+    background-color: $COLOR-BACKGROUND-LIGHT;
+    color: $COLOR-BACKGROUND-DARK;
+    a { color: $COLOR-BACKGROUND-DARK; }
+  }
+
+  .logo-mincul-wrapper {
+    width: 20%;
+    margin: 0 auto;
+
+    .logo-mincul {
+      width: 100%;
+      padding-bottom: 34.6%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      background-image: url({{ site.baseurl }}/images/logoMINCUL.png);
+    }
+  }
 }
 
-
-
 .content-footer {
+  position: fixed;
+  bottom: 0;
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding: 12px 0;
+  background-color: $COLOR-BACKGROUND-DARK;
+
+  &.manual {
+    background-color: $COLOR-BACKGROUND-LIGHT;
+    color: $COLOR-BACKGROUND-DARK;
+    a { color: $COLOR-BACKGROUND-DARK; }
+  }
 
   .content-footer-left {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     width: 50%;
 
     &.info {
@@ -72,8 +105,11 @@ a {
     }
 
     .content-footer-left-title {
-      padding: 0 12px;
+      padding: 0;
+      padding-right: 12px;
       text-transform: uppercase;
+      font-weight: bold;
+
       &.este::before { content: "este"; }
       &.oeste::before { content: "oeste"; }
       &.cielo::before { content: "cielo"; }
@@ -81,7 +117,8 @@ a {
     }
 
     .content-footer-left-time {
-      padding: 0 12px;
+      padding: 0;
+      padding-left: 12px;
       &.este::before { content: "abierto de 04:00 a 10:00 GMT-5"; }
       &.oeste::before { content: "abierto de 16:00 a 22:00 GMT-5"; }
       &.cielo::before { content: "abierto de 22:00 a 04:00 GMT-5"; }
@@ -97,8 +134,13 @@ a {
 
     .content-footer-right-item {
       width: 20%;
-      padding: 0 12px;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
       text-align: center;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
 
       &.plus::before { content: "+"; }
       &.plus:hover::before { content: "información & créditos"; }
@@ -113,5 +155,49 @@ a {
         text-transform: none;
       }
     }
+
+    .content-footer-right-item + .content-footer-right-item {
+      padding-left: 24px;
+    }
+  }
+}
+
+.frame-wrapper {
+  width: 100vw;
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  pointer-events: none;
+
+  .frame-top {
+    top: 0;
+    width: 100%;
+    padding-bottom: 15.625%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    background-image: url({{ site.baseurl }}/images/frame-top.png);
+  }
+
+  .frame-middle {
+    width: 100%;
+    flex: 1;
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: 100%;
+    background-image: url({{ site.baseurl }}/images/frame-middle.png);
+  }
+
+  .frame-bottom {
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 15.625%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100%;
+    background-image: url({{ site.baseurl }}/images/frame-bottom.png);
   }
 }
