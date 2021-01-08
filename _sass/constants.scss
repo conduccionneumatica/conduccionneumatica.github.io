@@ -22,6 +22,6 @@ $TABLET-WIDTH-MIN: 1000px;
     @media only screen and (max-width: $DESKTOP-WIDTH-MIN) { @content; }
   }
   @else if $canvas == TABLET {
-   @media only screen and (min-width: $TABLET-WIDTH-MIN) { @content; }
+   @media only screen and (max-width: $TABLET-WIDTH-MIN) { @content; }
   }
 }
