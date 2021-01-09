@@ -98,8 +98,8 @@ Sara La Torre
 Camille Jackson  
 Grupo electrógeno  
 Ministerio de Cultura del Perú  
+Silo Arte e Latitude Rural  
 Ginsberg Galería  
 Dukis  
 Aprils  
-Editorial Coagulaccionar  
-Silo Arte e Latitude Rural
+Editorial Coagulaccionar
