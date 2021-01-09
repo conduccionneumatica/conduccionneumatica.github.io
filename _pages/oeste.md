@@ -3,6 +3,8 @@ layout: content
 title: 'Oeste'
 permalink: /oeste/
 ---
+{% include vimeo.html id="289756234" %}
+
 el diafragma  
 \=  
 entre el tórax  
