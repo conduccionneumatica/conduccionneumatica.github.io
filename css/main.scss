@@ -92,10 +92,10 @@ a {
   padding: 2vh 2vw;
   box-sizing: border-box;
   z-index: 10;
+  color: $COLOR-WHITE;
+  a { color: $COLOR-WHITE; }
 
   &.manual {
-    color: $COLOR-WHITE;
-    a { color: $COLOR-WHITE; }
     .content-footer-right-item.manual {
       color: $COLOR-BACKGROUND-DARK;
     }
@@ -108,9 +108,6 @@ a {
     align-items: center;
     width: 50%;
 
-    &.info {
-      color: $COLOR-TEXT;
-    }
     &.este, &.oeste, &.cielo, &.suelo {
       color: $COLOR-RED;
     }
