@@ -82,7 +82,7 @@ a {
   }
 }
 
-.content-footer {
+.footer {
   position: fixed;
   bottom: 0;
   display: flex;
@@ -96,12 +96,12 @@ a {
   a { color: $COLOR-WHITE; }
 
   &.manual {
-    .content-footer-right-item.manual {
+    .footer-right-item.manual {
       color: $COLOR-BACKGROUND-DARK;
     }
   }
 
-  .content-footer-left {
+  .footer-left {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -112,7 +112,7 @@ a {
       color: $COLOR-RED;
     }
 
-    .content-footer-left-title {
+    .footer-left-title {
       padding: 0;
       padding-right: 12px;
       text-transform: uppercase;
@@ -124,7 +124,7 @@ a {
       &.suelo::before { content: "suelo"; }
     }
 
-    .content-footer-left-time {
+    .footer-left-time {
       padding: 0;
       padding-left: 12px;
       &.este::before { content: "abierto de 04:00 a 10:00 GMT-5"; }
@@ -134,13 +134,13 @@ a {
     }
   }
 
-  .content-footer-right {
+  .footer-right {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     width: 50%;
 
-    .content-footer-right-item {
+    .footer-right-item {
       width: 20%;
       padding: 0;
       display: flex;
@@ -164,7 +164,7 @@ a {
       }
     }
 
-    .content-footer-right-item + .content-footer-right-item {
+    .footer-right-item + .footer-right-item {
       padding-left: 24px;
     }
   }

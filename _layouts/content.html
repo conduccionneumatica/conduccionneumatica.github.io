@@ -17,17 +17,8 @@
       </div>
     </div>
 
-    <div class="content-footer {{ slug }}">
-      <div class="content-footer-left {{ slug }}">
-        <div class="content-footer-left-title {{ slug }}"></div>
-        <div class="content-footer-left-time {{ slug }}"></div>
-      </div>
+    {% include footer.html slug=slug %}
 
-      <div class="content-footer-right">
-        <a href="{{ site.baseurl}}/info/" class="content-footer-right-item plus"></a>
-        <a href="{{ site.baseurl}}/manual/" class="content-footer-right-item manual"></a>
-      </div>
-    </div>
   </body>
   <script type='text/javascript' src="{{ site.baseurl }}/js/content.js"></script>
 </html>
