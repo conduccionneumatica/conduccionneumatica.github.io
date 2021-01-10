@@ -112,7 +112,7 @@ a {
       color: $COLOR-RED;
     }
 
-    .footer-left-title {
+    .footer-title {
       padding: 0;
       padding-right: 12px;
       text-transform: uppercase;
@@ -124,7 +124,7 @@ a {
       &.suelo::before { content: "suelo"; }
     }
 
-    .footer-left-time {
+    .footer-time {
       padding: 0;
       padding-left: 12px;
       &.este::before { content: "abierto de 04:00 a 10:00 GMT-5"; }

@@ -21,4 +21,7 @@
 
   </body>
   <script type='text/javascript' src="{{ site.baseurl }}/js/content.js"></script>
+  {% if slug == 'manual' or slug == 'info' %}
+    <script type='text/javascript' src="{{ site.baseurl }}/js/time-title.js"></script>
+  {% endif %}
 </html>
