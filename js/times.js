@@ -5,13 +5,6 @@ const PAGES_AND_TIMES = [
   { title: 'cielo', time: '22:00 a 04:00' }
 ];
 
-let mFooterTitle, mFooterTime;
-
-function setElements() {
-  mFooterTitle = document.getElementById('my-footer-title');
-  mFooterTime = document.getElementById('my-footer-time');
-}
-
 function getTimeAtGMT(gmtOffset) {
   const d = new Date();
   const localTime = d.getTime();
@@ -26,19 +19,3 @@ function getPageIndex(gmt) {
   const GMTindex = Math.floor((GMTsecs - 4 * 60 * 60) / (6 * 60 * 60));
   return (GMTindex + PAGES_AND_TIMES.length) % PAGES_AND_TIMES.length;
 }
-
-function setTitle() {
-  const GMTm5 = getTimeAtGMT(-5);
-  const mIndex = getPageIndex(GMTm5);
-
-  mFooterTitle.innerHTML = PAGES_AND_TIMES[mIndex].title;
-  mFooterTime.innerHTML = `abierto de ${PAGES_AND_TIMES[mIndex].time} GMT-5`;
-}
-
-window.addEventListener('load', () => {
-  setElements();
-  setTitle();
-});
-
-setElements();
-setTitle();

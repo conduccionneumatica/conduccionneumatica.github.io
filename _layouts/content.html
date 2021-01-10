@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-
 {% assign slug = page.permalink | replace:'/','' %}
 
+<!DOCTYPE html>
 <html>
   <head>
     {% include head.html %}
@@ -20,8 +19,11 @@
     {% include footer.html slug=slug %}
 
   </body>
+  <script type='text/javascript' src="{{ site.baseurl }}/js/times.js"></script>
   <script type='text/javascript' src="{{ site.baseurl }}/js/content.js"></script>
   {% if slug == 'manual' or slug == 'info' %}
-    <script type='text/javascript' src="{{ site.baseurl }}/js/time-title.js"></script>
+    <script type='text/javascript' src="{{ site.baseurl }}/js/fix-footer.js"></script>
+  {% elsif slug == 'este' or slug == 'oeste' or slug == 'cielo' or slug == 'suelo' %}
+    <script type='text/javascript' src="{{ site.baseurl }}/js/check-time.js"></script>
   {% endif %}
 </html>
