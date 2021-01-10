@@ -94,6 +94,7 @@ a {
   z-index: 10;
   color: $COLOR-WHITE;
   a { color: $COLOR-WHITE; }
+  pointer-events: none;
 
   &.manual {
     .footer-right-item.manual {
@@ -149,6 +150,7 @@ a {
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      pointer-events: all;
 
       &.plus::before { content: "+"; }
       &.plus:hover::before { content: "información & créditos"; }
@@ -181,6 +183,7 @@ a {
   pointer-events: none;
 
   .frame-top {
+    position: relative;
     width: 100%;
     padding-bottom: 8%;
     background-repeat: no-repeat;
@@ -197,9 +200,45 @@ a {
       padding-bottom: 10.68%;
       background-image: url({{ site.baseurl }}/images/frame-top-S.png);
     }
+
+    .frame-top-click {
+      position: absolute;
+      top: 39%;
+      width: 100%;
+      height: 12%;
+      cursor: pointer;
+      pointer-events: all;
+
+      @include media-query(TABLET) {
+        top: 44%;
+      }
+      @include media-query(MOBILE) {
+        top: 44%;
+      }
+    }
+
+    .frame-title-click {
+      position: absolute;
+      top: 0;
+      left: 42%;
+      width: 16%;
+      height: 98%;
+      cursor: pointer;
+      pointer-events: all;
+
+      @include media-query(TABLET) {
+        left: 41%;
+        width: 18%;
+      }
+      @include media-query(MOBILE) {
+        left: 38%;
+        width: 24%;
+      }
+    }
   }
 
   .frame-middle {
+    position: relative;
     width: 100%;
     flex: 1;
     background-repeat: repeat-y;
@@ -213,9 +252,27 @@ a {
     @include media-query(MOBILE) {
       background-image: url({{ site.baseurl }}/images/frame-middle-S.png);
     }
+
+    .frame-side-click {
+      position: absolute;
+      width: 1.5%;
+      height: 114%;
+      top: -7%;
+      z-index: 12;
+      cursor: pointer;
+      pointer-events: all;
+
+      &.left {
+        left: 0;
+      }
+      &.right {
+        right: 0;
+      }
+    }
   }
 
   .frame-bottom {
+    position: relative;
     width: 100%;
     padding-bottom: 8%;
     background-repeat: no-repeat;
@@ -231,6 +288,41 @@ a {
     @include media-query(MOBILE) {
       padding-bottom: 10.68%;
       background-image: url({{ site.baseurl }}/images/frame-bottom-S.png);
+    }
+
+    .frame-bottom-click {
+      position: absolute;
+      bottom: 33%;
+      width: 100%;
+      height: 14%;
+      cursor: pointer;
+      pointer-events: all;
+
+      @include media-query(TABLET) {
+        bottom: 37%;
+      }
+      @include media-query(MOBILE) {
+        bottom: 37%;
+      }
+    }
+
+    .frame-image-click {
+      position: absolute;
+      top: 15%;
+      left: 45%;
+      width: 10%;
+      height: 77%;
+      cursor: pointer;
+      pointer-events: all;
+
+      @include media-query(TABLET) {
+        left: 44%;
+        width: 12%;
+      }
+      @include media-query(MOBILE) {
+        left: 42%;
+        width: 16%;
+      }
     }
   }
 
