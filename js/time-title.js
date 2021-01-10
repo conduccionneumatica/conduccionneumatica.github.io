@@ -21,14 +21,18 @@ function getTimeAtGMT(gmtOffset) {
   return (new Date(utc + (3600000 * gmtOffset)));
 }
 
+function getPageIndex(gmt) {
+  const GMTsecs = gmt.getHours() * 60 * 60 + gmt.getMinutes() * 60 + gmt.getSeconds();
+  const GMTindex = Math.floor((GMTsecs - 4 * 60 * 60) / (6 * 60 * 60));
+  return (GMTindex + PAGES_AND_TIMES.length) % PAGES_AND_TIMES.length;
+}
+
 function setTitle() {
   const GMTm5 = getTimeAtGMT(-5);
-  const GMTm5Secs = GMTm5.getHours() * 60 * 60 + GMTm5.getMinutes() * 60 + GMTm5.getSeconds();
-  const GMTm5Index = Math.floor((GMTm5Secs - 4 * 60 * 60) / (6 * 60 * 60));
-  const GMTm5FixedIndex = (GMTm5Index + 4) % 4;
+  const mIndex = getPageIndex(GMTm5);
 
-  mFooterTitle.innerHTML = PAGES_AND_TIMES[GMTm5FixedIndex].title;
-  mFooterTime.innerHTML = `abierto de ${PAGES_AND_TIMES[GMTm5FixedIndex].time} GMT-5`;
+  mFooterTitle.innerHTML = PAGES_AND_TIMES[mIndex].title;
+  mFooterTime.innerHTML = `abierto de ${PAGES_AND_TIMES[mIndex].time} GMT-5`;
 }
 
 window.addEventListener('load', () => {
