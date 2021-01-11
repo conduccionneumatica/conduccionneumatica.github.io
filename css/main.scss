@@ -451,26 +451,23 @@ a {
 }
 
 .video-wrapper-sizer {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  width: 900px;
+  height: 506px;
+  margin: 0 auto 40px;
 
   .video-wrapper {
     position: relative;
-    margin: 1rem auto;
-    height: 0;
+    margin: 0 auto;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 
     iframe {
       position: absolute;
-      top:0;
+      top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-    }
-
-    &.video-wrapper-16x9 {
-      padding-bottom: 56.25%;
     }
   }
 }
