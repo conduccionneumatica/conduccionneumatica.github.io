@@ -21,9 +21,14 @@
   </body>
   <script type='text/javascript' src="{{ site.baseurl }}/js/times.js"></script>
   <script type='text/javascript' src="{{ site.baseurl }}/js/content.js"></script>
+
   {% if slug == 'manual' or slug == 'info' %}
     <script type='text/javascript' src="{{ site.baseurl }}/js/fix-footer.js"></script>
   {% elsif slug == 'este' or slug == 'oeste' or slug == 'cielo' or slug == 'suelo' %}
     <script type='text/javascript' src="{{ site.baseurl }}/js/check-time.js"></script>
+  {% endif %}
+
+  {% if slug == 'manual' %}
+    <script type='text/javascript' src="{{ site.baseurl }}/js/manual.js"></script>
   {% endif %}
 </html>

@@ -31,8 +31,34 @@ Todos los ejercicios se encuentran en una publicación impresa en risografía ll
       <li>Tiraje: 150 copias</li>
       <li>Precio: 40 soles</li>
     </ul>
-    <ul class="manual-table-info-list manual-table-info-button">
+    <ul id="my-manual-table-info-button" class="manual-table-info-list manual-table-info-button">
       <li>Consiguelo aquí</li>
     </ul>
+  </div>
+</div>
+
+<div class="manual-table manual-form-table">
+  <div class="manual-table-image-wrapper"></div>
+  <div class="manual-table-info">
+    <form id="my-form" class="manual-form" action="https://formspree.io/f/mayladrk" method="POST">
+      <ul class="manual-table-info-list">
+        <li>
+          Nombre:
+          <input type="text" name="name" required>
+        </li>
+        <li>
+          Correo Electrónico:
+          <input type="email" name="_replyto" required>
+        </li>
+        <li>
+          Teléfono:
+          <input type="tel" name="phone" required>
+        </li>
+        <li>
+          <button id="my-form-button" class="manual-form-button" type="submit">Enviar</button>
+        </li>
+        <li id="my-form-status" class="manual-form-status"></li>
+      </ul>
+    </form>
   </div>
 </div>

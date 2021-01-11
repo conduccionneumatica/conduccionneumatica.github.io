@@ -338,7 +338,7 @@ a {
   max-width: 1100px;
   display: flex;
   flex-direction: row;
-  margin: 8vh auto 10vh;
+  margin: 8vh auto 0;
   box-sizing: border-box;
 
   @include media-query(MOBILE) {
@@ -411,6 +411,40 @@ a {
           background-color: $COLOR-BACKGROUND-LIGHT;
           color: $COLOR-WHITE;
         }
+      }
+    }
+  }
+
+  &.manual-form-table {
+    margin-top: 0;
+    overflow: hidden;
+
+    .manual-form {
+      max-height: 0;
+      transition: max-height .5s linear;
+
+      li{
+        padding-bottom: 8px;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        padding: 2px 6px;
+        font-size: $FONT-SIZE-DESKTOP;
+        color: $COLOR-WHITE;
+        background-color: rgba(255,255,255,.2);
+
+        @include media-query(MOBILE) {
+          font-size: $FONT-SIZE-MOBILE;
+        }
+      }
+
+      .manual-form-status {
+        display: none;
       }
     }
   }
