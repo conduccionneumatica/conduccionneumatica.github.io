@@ -63,6 +63,26 @@ a {
     a { color: $COLOR-WHITE; }
   }
 
+  &.info {
+    .info-subtitle {
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .info-sub-subtitle {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 24px;
+    }
+    .info-sub-subtitle + .info-sub-subtitle {
+      margin-top: 12px;
+    }
+    .info-sub-subtitle + p {
+      margin-top: 0;
+    }
+  }
+
   .logo-mincul-wrapper {
     width: 20%;
     margin: 48px auto;
@@ -108,6 +128,11 @@ a {
     justify-content: flex-start;
     align-items: center;
     width: 50%;
+    font-size: $FONT-SIZE-FOOTER;
+
+    @include media-query(MOBILE) {
+      font-size: $FONT-SIZE-MOBILE;
+    }
 
     &.este, &.oeste, &.cielo, &.suelo {
       color: $COLOR-RED;
@@ -115,9 +140,11 @@ a {
 
     .footer-title {
       padding: 0;
-      padding-right: 12px;
+      padding-right: 6px;
       text-transform: uppercase;
       font-weight: bold;
+      font-size: 22px;
+      letter-spacing: 1px;
 
       &.este::before { content: "este"; }
       &.oeste::before { content: "oeste"; }
@@ -127,7 +154,7 @@ a {
 
     .footer-time {
       padding: 0;
-      padding-left: 12px;
+      padding-left: 6px;
       &.este::before { content: "abierto de 04:00 a 10:00 GMT-5"; }
       &.oeste::before { content: "abierto de 16:00 a 22:00 GMT-5"; }
       &.cielo::before { content: "abierto de 22:00 a 04:00 GMT-5"; }
@@ -147,14 +174,35 @@ a {
       display: flex;
       flex-direction: row;
       text-align: center;
+      font-weight: bold;
+      font-size: $FONT-SIZE-FOOTER;
       justify-content: center;
       align-items: center;
       cursor: pointer;
       pointer-events: all;
 
-      &.plus::before { content: "+"; }
-      &.plus:hover::before { content: "información & créditos"; }
+      @include media-query(MOBILE) {
+        font-size: $FONT-SIZE-MOBILE;
+      }
 
+      &.plus::before {
+        content: "+";
+        font-size: 24px;
+      }
+      &.plus:hover::before {
+        content: "información & créditos";
+        font-size: $FONT-SIZE-FOOTER;
+        @include media-query(MOBILE) {
+          font-size: $FONT-SIZE-MOBILE;
+        }
+      }
+
+      &.manual {
+        min-width: 128px;
+        @include media-query(MOBILE) {
+          min-width: 120px;
+        }
+      }
       &.manual::before {
         content: "manual del aire";
         text-transform: uppercase;
@@ -168,6 +216,9 @@ a {
 
     .footer-right-item + .footer-right-item {
       padding-left: 24px;
+      @include media-query(MOBILE) {
+        padding-left: 12px;
+      }
     }
   }
 }

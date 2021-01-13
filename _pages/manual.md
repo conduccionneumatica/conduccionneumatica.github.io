@@ -13,7 +13,7 @@ Ejercicios respiratorios para modelar cuerpos y atmósferas, y producir flujos d
 
 {% include vimeo.html id="289756234" %}
 
-Todos los ejercicios se encuentran en una publicación impresa en risografía llamada Manual del Aire.
+Encuentra 27 ejercicios más en la publicación impresa del Manual del Aire.
 
 <div class="manual-table">
   <div class="manual-table-image-wrapper">
@@ -21,7 +21,7 @@ Todos los ejercicios se encuentran en una publicación impresa en risografía ll
   </div>
   <div class="manual-table-info">
     <ul class="manual-table-info-list">
-      <li>MANUAL DEL AIRE</li>
+      <li>Manual del aire</li>
       <li>Impresión en risografía a dos tintas:<br>
         Rosa Fluor y Azul.</li>
       <li>44 páginas</li>
