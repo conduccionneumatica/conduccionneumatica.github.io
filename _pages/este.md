@@ -5,22 +5,6 @@ permalink: /este/
 ---
 {% include vimeo.html id="289756234" %}
 
-agujeros  
-o hélices  
-que soplan  
-ruido  
-vibración  
-percusión  
-conscientes  
-e inconscientes  
-automáticos  
-invisibles  
-que erosionan  
-y transforman  
-de a pocos  
-el cielo  
-el suelo
-
 El espacio que nos circunda – la atmósfera – se percibe como un vacío. Los cuerpos ahí se mueven con libertad, sintiendo (casi) nada. A veces un sutil soplo es perceptible en el tacto, la vista, el oído o el olfato. Esa brisa es la evidencia del aire que está presente, a veces disimulado en lo estático y sin contenido.
 
 Esa presencia es el contacto entre lo animado e inanimado, el lugar donde todas las especies estamos tocándonos y comiéndonos sin sentirlo. Está constantemente siendo cultivada y diseñada por todo lo que habita en este planeta. Ese vacío es un espacio lleno, que además está dentro de nosotras, así como nosotras estamos dentro de este.
