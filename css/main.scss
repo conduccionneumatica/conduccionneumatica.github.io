@@ -108,7 +108,7 @@ a {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 8vh;
+  height: 7vh;
   padding: 2vh 2vw;
   box-sizing: border-box;
   z-index: 10;
@@ -119,6 +119,12 @@ a {
   &.manual {
     .footer-right-item.manual {
       color: $COLOR-BACKGROUND-DARK;
+    }
+  }
+
+  &.info {
+    .footer-right-item.plus {
+      color: $COLOR-RED;
     }
   }
 
@@ -501,9 +507,35 @@ a {
   }
 }
 
+.video-with-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 40px;
+  padding: 0;
+  box-sizing: border-box;
+
+  .video-title {
+    width: 5%;
+    max-width: 50px;
+    height: 0;
+    padding-bottom: 50vh;
+    margin-right: 12px;
+    box-sizing: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .video-wrapper-sizer {
+    margin: 0;
+  }
+}
+
 .video-wrapper-sizer {
-  width: 900px;
-  height: 506px;
+  width: 800px;
+  height: 450px;
   margin: 0 auto 40px;
 
   .video-wrapper {
