@@ -6,9 +6,33 @@
   <body>
     {% include frame.html %}
     <div class="home-wrapper">
+      <div class="home-image-wrapper">
+        {% include home-image.svg %}
+        <div class="home-page-labels-container horizontal">
+          <div id="my-page-label-este" class="home-page-label este">
+            <div class="label-title">ESTE</div>
+            <div class="label-time">abierto de<br>04:00 a 10:00<br>GMT-5</div>
+          </div>
+          <div id="my-page-label-oeste" class="home-page-label oeste">
+            <div class="label-title">OESTE</div>
+            <div class="label-time">abierto de<br>16:00 a 22:00<br>GMT-5</div>
+          </div>
+        </div>
+        <div class="home-page-labels-container vertical">
+          <div id="my-page-label-cielo" class="home-page-label cielo">
+            <div class="label-title">CIELO</div>
+            <div class="label-time">abierto de<br>22:00 a 04:00<br>GMT-5</div>
+          </div>
+          <div id="my-page-label-suelo" class="home-page-label suelo">
+            <div class="label-title">SUELO</div>
+            <div class="label-time">abierto de<br>10:00 a 16:00<br>GMT-5</div>
+          </div>
+        </div>
+      </div>
     </div>
     {% include footer.html %}
   </body>
   <script type='text/javascript' src="{{ site.baseurl }}/js/times.js"></script>
+  <script type='text/javascript' src="{{ site.baseurl }}/js/home.js"></script>
   <script type='text/javascript' src="{{ site.baseurl }}/js/fix-footer.js"></script>
 </html>

@@ -24,6 +24,19 @@ function getPageIndex(gmt) {
   return (GMTindex + PAGES_AND_TIMES.length) % PAGES_AND_TIMES.length;
 }
 
+function checkTime(navigate) {
+  navigate = navigate || false;
+  const mPage = PAGES_AND_TIMES[getPageIndex(getTimeAtGMT(-5))];
+  const newUrl = `{{ site.baseurl }}/${mPage.title}/`;
+  if(!window.location.href.includes(mPage.title)) {
+    if (navigate) {
+      window.location.href = newUrl;
+    } else {
+      window.location.replace(newUrl);
+    }
+  }
+}
+
 function goHome() {
   window.location.replace('{{ site.baseurl }}/');
 }
