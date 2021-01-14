@@ -74,8 +74,8 @@ a {
     box-sizing: border-box;
 
     @include media-query(MOBILE) {
-      width: 80vw;
-      height: 80vw;
+      width: 70vw;
+      height: 70vw;
     }
 
     .home-page-labels-container {
@@ -231,6 +231,11 @@ a {
   a { color: $COLOR-WHITE; }
   pointer-events: none;
 
+  @include media-query(MOBILE) {
+    height: 6vh;
+    padding: 1vh 2vw;
+  }
+
   &.manual {
     .footer-right-item.manual {
       color: $COLOR-BACKGROUND-DARK;
@@ -248,7 +253,7 @@ a {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 50%;
+    width: 70%;
     font-size: $FONT-SIZE-FOOTER;
 
     @include media-query(MOBILE) {
@@ -266,6 +271,10 @@ a {
       font-weight: bold;
       font-size: 22px;
       letter-spacing: 1px;
+
+      @include media-query(MOBILE) {
+        font-size: 20px;
+      }
 
       &.este::before { content: "este"; }
       &.oeste::before { content: "oeste"; }
