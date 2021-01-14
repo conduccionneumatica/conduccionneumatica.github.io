@@ -64,8 +64,8 @@ a {
     border: 0;
     margin: 0;
     padding: 0;
-    width: 58vh;
-    height: 58vh;
+    width: calc(58vh - 40px);
+    height: calc(58vh - 40px);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -99,8 +99,8 @@ a {
       }
 
       &.vertical {
-        height: 114%;
-        padding: 0 0 3vh;
+        height: 118%;
+        padding: 0 0 3.3vh;
         flex-direction: column;
       }
 
