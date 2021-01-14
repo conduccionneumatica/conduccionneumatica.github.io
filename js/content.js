@@ -1,6 +1,6 @@
 let mFrameTop, mFrameMiddle, mFrameBottom, mPageWrapper, mContentText;
 
-function setElements() {
+function setContentElements() {
   mFrameTop = document.getElementById('my-frame-top');
   mFrameMiddle = document.getElementById('my-frame-middle');
   mFrameBottom = document.getElementById('my-frame-bottom');
@@ -31,7 +31,7 @@ function sizeVideos() {
 }
 
 window.addEventListener('load', () => {
-  setElements();
+  setContentElements();
   setPaddings();
   sizeVideos();
 });
@@ -41,6 +41,6 @@ window.addEventListener('resize', () => {
   sizeVideos();
 });
 
-setElements();
+setContentElements();
 setPaddings();
 sizeVideos();

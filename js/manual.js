@@ -3,7 +3,7 @@ const FORM_MAX_HEIGHT = '250px';
 const FORM_SCROLL_DELAY = 300;
 
 
-function setElements() {
+function setManualElements() {
   mForm = document.getElementById('my-form');
   mFormButton = document.getElementById('my-form-button');
   mStatus = document.getElementById('my-form-status');
@@ -11,7 +11,7 @@ function setElements() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-  setElements();
+  setManualElements();
 
   mShowFormButton.addEventListener('click', () => {
     if(mForm.style.maxHeight === FORM_MAX_HEIGHT) {

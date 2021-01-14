@@ -1,6 +1,6 @@
 let mFooterTitle, mFooterTime;
 
-function setElements() {
+function setFooterElements() {
   mFooterTitle = document.getElementById('my-footer-title');
   mFooterTime = document.getElementById('my-footer-time');
 }
@@ -14,9 +14,9 @@ function setTitle() {
 }
 
 window.addEventListener('load', () => {
-  setElements();
+  setFooterElements();
   setTitle();
 });
 
-setElements();
+setFooterElements();
 setTitle();
