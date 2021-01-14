@@ -1,3 +1,7 @@
+---
+layout: none
+---
+
 const PAGES_AND_TIMES = [
   { title: 'este', time: '04:00 a 10:00' },
   { title: 'suelo', time: '10:00 a 16:00' },
@@ -18,4 +22,8 @@ function getPageIndex(gmt) {
   const GMTsecs = gmt.getHours() * 60 * 60 + gmt.getMinutes() * 60 + gmt.getSeconds();
   const GMTindex = Math.floor((GMTsecs - 4 * 60 * 60) / (6 * 60 * 60));
   return (GMTindex + PAGES_AND_TIMES.length) % PAGES_AND_TIMES.length;
+}
+
+function goHome() {
+  window.location.replace('{{ site.baseurl }}/');
 }
