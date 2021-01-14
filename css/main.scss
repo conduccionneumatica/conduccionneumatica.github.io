@@ -89,6 +89,10 @@ a {
       align-items: center;
       pointer-events: none;
 
+      @include media-query(MOBILE) {
+        font-size: 14px;
+      }
+
       &.horizontal {
         width: 130%;
         flex-direction: row;
@@ -128,6 +132,10 @@ a {
           font-size: 0.8 * $FONT-SIZE-DESKTOP;
           max-width: 90px;
           display: none;
+          @include media-query(MOBILE) {
+            font-size: 0.8 * 0.8 * $FONT-SIZE-DESKTOP;
+          }
+
           &.show {
             display: block;
           }
@@ -257,7 +265,7 @@ a {
     font-size: $FONT-SIZE-FOOTER;
 
     @include media-query(MOBILE) {
-      font-size: $FONT-SIZE-MOBILE;
+      font-size: 0.9 * $FONT-SIZE-MOBILE;
     }
 
     &.este, &.oeste, &.cielo, &.suelo {
@@ -273,7 +281,7 @@ a {
       letter-spacing: 1px;
 
       @include media-query(MOBILE) {
-        font-size: 20px;
+        font-size: 18px;
       }
 
       &.este::before { content: "este"; }
@@ -312,7 +320,7 @@ a {
       pointer-events: all;
 
       @include media-query(MOBILE) {
-        font-size: $FONT-SIZE-MOBILE;
+        font-size: 0.9 * $FONT-SIZE-MOBILE;
       }
 
       &.plus::before {
