@@ -246,7 +246,7 @@ a {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 7vh;
+  height: 8vh;
   padding: 2vh 2vw;
   box-sizing: border-box;
   z-index: 10;
@@ -254,6 +254,9 @@ a {
   a { color: $COLOR-WHITE; }
   pointer-events: none;
 
+  @include media-query(TABLET) {
+    height: 7vh;
+  }
   @include media-query(MOBILE) {
     height: 6vh;
     padding: 1vh 2vw;
@@ -280,7 +283,7 @@ a {
     font-size: $FONT-SIZE-FOOTER;
 
     @include media-query(MOBILE) {
-      font-size: 0.9 * $FONT-SIZE-MOBILE;
+      font-size: 0.9 * 0.9 * $FONT-SIZE-MOBILE;
     }
 
     &.este, &.oeste, &.cielo, &.suelo {
@@ -296,7 +299,7 @@ a {
       letter-spacing: 1px;
 
       @include media-query(MOBILE) {
-        font-size: 18px;
+        font-size: 16px;
       }
 
       &.este::before { content: "este"; }
@@ -308,10 +311,35 @@ a {
     .footer-time {
       padding: 0;
       padding-left: 6px;
-      &.este::before { content: "abierto de 04:00 a 10:00 GMT-5"; }
-      &.oeste::before { content: "abierto de 16:00 a 22:00 GMT-5"; }
-      &.cielo::before { content: "abierto de 22:00 a 04:00 GMT-5"; }
-      &.suelo::before { content: "abierto de 10:00 a 16:00 GMT-5"; }
+
+      &.este::before {
+        content: "abierto de 04:00 a 10:00 GMT-5";
+        @include media-query(MOBILE) {
+          content: "04:00 a 10:00\00000aGMT-5";
+          white-space: pre;
+        }
+      }
+      &.oeste::before {
+        content: "abierto de 16:00 a 22:00 GMT-5";
+        @include media-query(MOBILE) {
+          content: "16:00 a 22:00\00000aGMT-5";
+          white-space: pre;
+        }
+      }
+      &.cielo::before {
+        content: "abierto de 22:00 a 04:00 GMT-5";
+        @include media-query(MOBILE) {
+          content: "22:00 a 04:00\00000aGMT-5";
+          white-space: pre;
+        }
+      }
+      &.suelo::before {
+        content: "abierto de 10:00 a 16:00 GMT-5";
+        @include media-query(MOBILE) {
+          content: "10:00 a 16:00\00000aGMT-5";
+          white-space: pre;
+        }
+      }
     }
   }
 

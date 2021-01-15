@@ -8,9 +8,10 @@ function setFooterElements() {
 function setTitle() {
   const GMTm5 = getTimeAtGMT(-5);
   const mIndex = getPageIndex(GMTm5);
+  const slug = PAGES_AND_TIMES[mIndex].title;
 
-  mFooterTitle.innerHTML = PAGES_AND_TIMES[mIndex].title;
-  mFooterTime.innerHTML = `abierto de ${PAGES_AND_TIMES[mIndex].time} GMT-5`;
+  mFooterTitle.classList.add(slug);
+  mFooterTime.classList.add(slug);
 }
 
 window.addEventListener('load', () => {
