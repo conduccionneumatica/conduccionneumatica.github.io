@@ -3,10 +3,10 @@ layout: none
 ---
 
 const PAGES_AND_TIMES = [
-  { title: 'este', time: '04:00 a 10:00' },
-  { title: 'suelo', time: '10:00 a 16:00' },
-  { title: 'oeste', time: '16:00 a 22:00' },
-  { title: 'cielo', time: '22:00 a 04:00' }
+  { title: 'este' },
+  { title: 'suelo' },
+  { title: 'oeste' },
+  { title: 'cielo' }
 ];
 
 function getTimeAtGMT(gmtOffset) {
