@@ -5,6 +5,19 @@ permalink: /oeste/
 ---
 {% include vimeo.html id="289756234" %}
 
+el diafragma  
+\=  
+entre el tórax  
+y el abdomen,  
+entre el aire  
+y la tierra,  
+entre el cielo  
+y el suelo,  
+entre creer  
+y crear  
+=  
+el horizonte
+
 El aire entra, baja, presiona, relaja, sube y sale por donde entró. Su recorrido es circular, a diferencia de los sólidos o líquidos que van de arriba hacia abajo del cuerpo. La conformación gaseosa y ligera del aire desafía la fuerza de la gravedad. El aire no está en el suelo, sino en el cielo, por lo tanto se mantiene siempre cercano a la cabeza.
 
 El aire nunca se quedará pegado en la suela, ni se podrá atrapar en un puño; entrará a los pulmones y partes de sus sustancias ingresarán a los canales sanguíneos difusionándose en sus fluidos impulsados por el corazón.

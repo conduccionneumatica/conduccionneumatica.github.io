@@ -3,7 +3,9 @@ layout: content
 title: 'Información & créditos'
 permalink: /info/
 ---
-La Conducción Neumática es un proyecto multi-medios y colectivo de acciones aéreas que investiga los fenómenos del aire fuera y dentro del cuerpo, con el objetivo de pensarlos, des-pensarlos, hacerlos, des-hacerlos y mezclarlos. El proceso y resultado del proyecto combinan la coreografía, la escultura, el ritmo, el sonido y el video. Los principales materiales con los que se trabajó son el aire, que es la materia prima, y el cuerpo, que es el mecanismo manipulador y manipulado.
+La Conducción Neumática es un proyecto multi-medios y colectivo de acciones aéreas que investiga los fenómenos del aire fuera y dentro del cuerpo. Pensandolos, des-pensandolos, haciéndolos, des-haciéndolos y mezclándolos. El proceso y resultado del proyecto combinan la coreografía, la escultura, el ritmo, el sonido y el video.
+
+Los principales materiales con los que se trabajó son el aire, que es la materia prima, y el cuerpo, que es el mecanismo manipulador y manipulado.
 
 Es creada y dirigida por Genietta Varsi, quien desde una percepción escultórica investiga cómo la materia (los cuerpos) modelan y transforman el entorno con sus comportamientos, y viceversa.
 
@@ -19,7 +21,7 @@ Creación y dirección ~ Genietta Varsi
 
 Co-dirección audiovisual ~ Andrea Martorellet  
 
-Asistente de producción ~ Tomás Orrego  
+Co-producción ~ Tomás Orrego  
 
 Cámara ~ Tomás Orrego y Asiel Nuñez  
 
@@ -33,7 +35,7 @@ Esculturas y escenografías ~ Genietta Varsi
 
 Edición de video ~ Tomás Orrego  
 
-Colorización ~  
+Colorización ~ Daniel Carcelen  
 
 Edición y producción de sonido ~ Genietta Varsi y Tomás Orrego  
 
@@ -69,8 +71,10 @@ Jimena Casaverde, Nicole Remy, Mateo Majluf, Teté Leguía, Tomás Orrego
 <div class="info-sub-subtitle">Equipo de producción del Manual del Aire (publicación)</div>
 
 Impresión del Manual ~ Imprenta Bicho coordinado por Sara La Torre  
+
 Apoyo editorial ~ Gabriel Joppert  
-Creación, diseño y textos ~ Genietta Varsi
+
+Creación, diseño y textos ~ Genietta Varsi  
 
 Colaboradorxs y asesorxs ~ Silo Arte e Latitude Rural, Aline Barros , Andrea Ribeiro, Fabiola Fonseca, Fabrizio Tapia, Fernanda C. Mello, Gabriel Joppert, João Machado, Katerina Volcov, Natalia Gomes, Thiago Hersan, Rodolfo Ruscheinsky.
 
@@ -105,6 +109,7 @@ José Balado
 Kabuki  
 Claudia Martorellet  
 Romina Montserrat  
+Daniel Vargas  
 Giovanna Varsi  
 Sara La Torre  
 Camille Jackson  
