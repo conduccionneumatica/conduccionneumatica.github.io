@@ -1,5 +1,6 @@
 ---
 layout: home
 title: 'Conducción Neumática'
-permalink: /
+permalink_: /
+permalink: /home/
 ---

@@ -1,7 +1,8 @@
 ---
 layout: content
 title: 'Manual del Aire'
-permalink: /manual/
+permalink_: /manual/
+permalink: /
 vimeo:
   - 503877285
   - 503876816
