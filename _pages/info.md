@@ -35,7 +35,7 @@ Esculturas y escenografías ~ Genietta Varsi
 
 Edición de video ~ Tomás Orrego  
 
-Colorización ~ Daniel Carcelen  
+Colorización ~ Bernando Soares  
 
 Edición y producción de sonido ~ Genietta Varsi y Tomás Orrego  
 
