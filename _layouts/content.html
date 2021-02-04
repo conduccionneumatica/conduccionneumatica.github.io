@@ -1,7 +1,4 @@
 {% assign slug = page.permalink | replace:'/','' %}
-{% if slug == '' %}
-  {% assign slug = 'manual' %}
-{% endif %}
 
 <!DOCTYPE html>
 <html>
@@ -25,7 +22,7 @@
   <script type='text/javascript' src="{{ site.baseurl }}/js/content.js"></script>
 
   {% if slug == 'manual' or slug == 'info' %}
-    <!--<script type='text/javascript' src="{{ site.baseurl }}/js/fix-footer.js"></script>-->
+    <script type='text/javascript' src="{{ site.baseurl }}/js/fix-footer.js"></script>
   {% elsif slug == 'este' or slug == 'oeste' or slug == 'cielo' or slug == 'suelo' %}
     <script type='text/javascript' src="{{ site.baseurl }}/js/check-time.js"></script>
   {% endif %}
