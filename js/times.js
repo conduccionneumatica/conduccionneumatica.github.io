@@ -28,7 +28,7 @@ function checkTime(navigate) {
   navigate = navigate || false;
   const mPage = PAGES_AND_TIMES[getPageIndex(getTimeAtGMT(-5))];
   const newUrl = `{{ site.baseurl }}/${mPage.title}/`;
-  if(!window.location.href.includes(mPage.title)) {
+  if(!window.location.href.includes(`/${mPage.title}`)) {
     if (navigate) {
       window.location.href = newUrl;
     } else {
