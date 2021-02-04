@@ -3,7 +3,7 @@ layout: content
 title: 'Oeste'
 permalink: /oeste/
 ---
-{% include vimeo.html id="289756234" %}
+{% include vimeo.html id="506596581" %}
 
 el diafragma  
 \=  
