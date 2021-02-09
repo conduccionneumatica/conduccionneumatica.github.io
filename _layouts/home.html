@@ -1,3 +1,5 @@
+{% include page-lang.html %}
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,22 +12,22 @@
         {% include home-image.svg %}
         <div class="home-page-labels-container horizontal">
           <div id="my-page-label-este" class="home-page-label este">
-            <div class="label-title">ESTE</div>
-            <div class="label-time">abierto de<br>04:00 a 10:00<br>GMT-5</div>
+            <div class="label-title">{{ STRING_ESTE }}</div>
+            <div class="label-time">{{ STRING_ABIERTO }}<br>04:00 - 10:00<br>GMT-5</div>
           </div>
           <div id="my-page-label-oeste" class="home-page-label oeste">
-            <div class="label-title">OESTE</div>
-            <div class="label-time">abierto de<br>16:00 a 22:00<br>GMT-5</div>
+            <div class="label-title">{{ STRING_OESTE }}</div>
+            <div class="label-time">{{ STRING_ABIERTO }}<br>16:00 - 22:00<br>GMT-5</div>
           </div>
         </div>
         <div class="home-page-labels-container vertical">
           <div id="my-page-label-cielo" class="home-page-label cielo">
-            <div class="label-title">CIELO</div>
-            <div class="label-time">abierto de<br>22:00 a 04:00<br>GMT-5</div>
+            <div class="label-title">{{ STRING_CIELO }}</div>
+            <div class="label-time">{{ STRING_ABIERTO }}<br>22:00 - 04:00<br>GMT-5</div>
           </div>
           <div id="my-page-label-suelo" class="home-page-label suelo">
-            <div class="label-title">SUELO</div>
-            <div class="label-time">abierto de<br>10:00 a 16:00<br>GMT-5</div>
+            <div class="label-title">{{ STRING_SUELO }}</div>
+            <div class="label-time">{{ STRING_ABIERTO }}<br>10:00 - 16:00<br>GMT-5</div>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ function setFooterElements() {
 function setTitle() {
   const GMTm5 = getTimeAtGMT(-5);
   const mIndex = getPageIndex(GMTm5);
-  const slug = PAGES_AND_TIMES[mIndex].title;
+  const slug = PAGES_AND_TIMES[PAGE_LANG][mIndex];
 
   mFooterTitle.classList.add(slug);
   mFooterTime.classList.add(slug);

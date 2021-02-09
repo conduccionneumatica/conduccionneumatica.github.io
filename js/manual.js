@@ -2,7 +2,6 @@ let mForm, mFormButton, mShowFormButton, mStatus;
 const FORM_MAX_HEIGHT = '250px';
 const FORM_SCROLL_DELAY = 300;
 
-
 function setManualElements() {
   mForm = document.getElementById('my-form');
   mFormButton = document.getElementById('my-form-button');
@@ -25,13 +24,13 @@ window.addEventListener('DOMContentLoaded', function() {
   function success() {
     mForm.reset();
     mStatus.style.display = 'block';
-    mStatus.innerHTML = '¡Gracias!';
+    mStatus.innerHTML = (PAGE_LANG === 'en') ? 'Thank you!' : '¡Gracias!';
     setTimeout(() => mForm.scrollIntoView({ behavior: 'smooth' }), FORM_SCROLL_DELAY);
   }
 
   function error() {
     mStatus.style.display = 'block';
-    mStatus.innerHTML = '¡Oops! Hubo un problema.';
+    mStatus.innerHTML = (PAGE_LANG === 'en') ? 'Ooops! There was a problem.' : '¡Oops! Hubo un problema.';
     setTimeout(() => mForm.scrollIntoView({ behavior: 'smooth' }), FORM_SCROLL_DELAY);
   }
 

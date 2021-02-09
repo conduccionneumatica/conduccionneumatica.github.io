@@ -123,6 +123,7 @@ a {
 
         .label-title {
           display: block;
+          text-transform: uppercase;
           &.hide {
             display: none;
           }
@@ -306,6 +307,10 @@ a {
       &.oeste::before { content: "oeste"; }
       &.cielo::before { content: "cielo"; }
       &.suelo::before { content: "suelo"; }
+      &.east::before { content: "east"; }
+      &.west::before { content: "west"; }
+      &.sky::before { content: "sky"; }
+      &.ground::before { content: "ground"; }
     }
 
     .footer-time {
@@ -337,6 +342,34 @@ a {
         content: "abierto de 10:00 a 16:00 GMT-5";
         @include media-query(MOBILE) {
           content: "10:00 a 16:00\00000aGMT-5";
+          white-space: pre;
+        }
+      }
+      &.east::before {
+        content: "open from 04:00 - 10:00 GMT-5";
+        @include media-query(MOBILE) {
+          content: "04:00 - 10:00\00000aGMT-5";
+          white-space: pre;
+        }
+      }
+      &.west::before {
+        content: "open from 16:00 - 22:00 GMT-5";
+        @include media-query(MOBILE) {
+          content: "16:00 - 22:00\00000aGMT-5";
+          white-space: pre;
+        }
+      }
+      &.sky::before {
+        content: "open from 22:00 - 04:00 GMT-5";
+        @include media-query(MOBILE) {
+          content: "22:00 - 04:00\00000aGMT-5";
+          white-space: pre;
+        }
+      }
+      &.ground::before {
+        content: "open from 10:00 - 16:00 GMT-5";
+        @include media-query(MOBILE) {
+          content: "10:00 - 16:00\00000aGMT-5";
           white-space: pre;
         }
       }
@@ -378,6 +411,10 @@ a {
         }
       }
 
+      &.plus.en:hover::before {
+        content: "information & credits";
+      }
+
       &.manual {
         min-width: 128px;
         @include media-query(MOBILE) {
@@ -388,10 +425,17 @@ a {
         content: "manual del aire";
         text-transform: uppercase;
       }
-
       &.manual:hover::before {
         content: "ejercicios respiratorios";
         text-transform: none;
+      }
+
+      &.manual.en::before {
+        content: "air manual";
+      }
+      &.manual.en:hover::before {
+        content: "breathing\00000aexercises";
+        white-space: pre;
       }
     }
 

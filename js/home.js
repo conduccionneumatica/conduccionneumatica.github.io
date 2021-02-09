@@ -7,7 +7,7 @@ function setHomeElements() {
 function setHovers() {
   const GMTm5 = getTimeAtGMT(-5);
   const mIndex = getPageIndex(GMTm5);
-  const currentPage = PAGES_AND_TIMES[mIndex].title;
+  const currentPageSlug = PAGES_AND_TIMES['es'][mIndex];
 
   mGroups.forEach(el => {
     const mHoverPath = el.getElementsByClassName('home-path-hover')[0];
@@ -17,7 +17,7 @@ function setHovers() {
     const currentLabel = document.getElementById(`my-page-label-${mSlug}`);
     const hoverEls = [mHoverPath, currentLabel];
 
-    if(el.classList.contains(`home-group-${currentPage}`) || 0) {
+    if(el.classList.contains(`home-group-${currentPageSlug}`) || 0) {
       currentPaths.forEach(p => {
         p.classList.add('current');
       });
