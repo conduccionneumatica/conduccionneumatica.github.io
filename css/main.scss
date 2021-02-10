@@ -307,10 +307,10 @@ a {
       &.oeste::before { content: "oeste"; }
       &.cielo::before { content: "cielo"; }
       &.suelo::before { content: "suelo"; }
-      &.east::before { content: "east"; }
-      &.west::before { content: "west"; }
-      &.sky::before { content: "sky"; }
-      &.ground::before { content: "ground"; }
+      &.este.en::before { content: "east"; }
+      &.oeste.en::before { content: "west"; }
+      &.cielo.en::before { content: "sky"; }
+      &.suelo.en::before { content: "ground"; }
     }
 
     .footer-time {
@@ -345,34 +345,10 @@ a {
           white-space: pre;
         }
       }
-      &.east::before {
-        content: "open from 04:00 - 10:00 GMT-5";
-        @include media-query(MOBILE) {
-          content: "04:00 - 10:00\00000aGMT-5";
-          white-space: pre;
-        }
-      }
-      &.west::before {
-        content: "open from 16:00 - 22:00 GMT-5";
-        @include media-query(MOBILE) {
-          content: "16:00 - 22:00\00000aGMT-5";
-          white-space: pre;
-        }
-      }
-      &.sky::before {
-        content: "open from 22:00 - 04:00 GMT-5";
-        @include media-query(MOBILE) {
-          content: "22:00 - 04:00\00000aGMT-5";
-          white-space: pre;
-        }
-      }
-      &.ground::before {
-        content: "open from 10:00 - 16:00 GMT-5";
-        @include media-query(MOBILE) {
-          content: "10:00 - 16:00\00000aGMT-5";
-          white-space: pre;
-        }
-      }
+      &.este.en::before { content: "open from 04:00 - 10:00 GMT-5"; }
+      &.oeste.en::before { content: "open from 16:00 - 22:00 GMT-5"; }
+      &.cielo.en::before { content: "open from 22:00 - 04:00 GMT-5"; }
+      &.suelo.en::before { content: "open from 10:00 - 16:00 GMT-5"; }
     }
   }
 

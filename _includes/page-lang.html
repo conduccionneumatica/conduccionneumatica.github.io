@@ -6,13 +6,14 @@
 {% assign STRING_SUELO = 'suelo' %}
 {% assign STRING_ABIERTO = 'abierto de' %}
 
-
-{% if page.url contains '/en/' %}
+{% if page.path contains '/en/' %}
   {% assign PAGE_LANG = 'en' %}
-  {% assign PAGE_LANG_URL = 'en/' %}
+  {% assign PAGE_LANG_URL = '/en' %}
   {% assign STRING_ESTE = 'east' %}
   {% assign STRING_OESTE = 'west' %}
   {% assign STRING_CIELO = 'sky' %}
   {% assign STRING_SUELO = 'ground' %}
   {% assign STRING_ABIERTO = 'open from' %}
 {% endif %}
+
+{% assign SLUG = page.name | replace:'.md','' %}

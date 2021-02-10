@@ -1,11 +1,11 @@
 <div class="footer {{ include.slug }}">
   <div class="footer-left {{ include.slug }}">
-    <div id="my-footer-title" class="footer-title {{ include.slug }}"></div>
-    <div id="my-footer-time" class="footer-time {{ include.slug }}"></div>
+    <div id="my-footer-title" class="footer-title {{ include.slug }} {{ PAGE_LANG }}"></div>
+    <div id="my-footer-time" class="footer-time {{ include.slug }} {{ PAGE_LANG }}"></div>
   </div>
 
   <div class="footer-right">
-    <a href="{{ site.baseurl }}/{{ PAGE_LANG_URL }}info/" class="footer-right-item plus {{ PAGE_LANG }}"></a>
-    <a href="{{ site.baseurl }}/{{ PAGE_LANG_URL }}manual/" class="footer-right-item manual {{ PAGE_LANG }}"></a>
+    <a href="{{ site.baseurl }}{{ PAGE_LANG_URL }}/info/" class="footer-right-item plus {{ PAGE_LANG }}"></a>
+    <a href="{{ site.baseurl }}{{ PAGE_LANG_URL }}/manual/" class="footer-right-item manual {{ PAGE_LANG }}"></a>
   </div>
 </div>

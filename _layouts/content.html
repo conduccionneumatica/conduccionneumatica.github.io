@@ -1,14 +1,13 @@
 {% include page-lang.html %}
-{% assign slug = page.permalink | replace:'/en/','/' | replace:'/','' %}
 
 <!DOCTYPE html>
 <html>
   <head>
     {% include head.html %}
   </head>
-  <body class="{{ slug }}">
+  <body class="{{ SLUG }}">
     {% include frame.html %}
-    <div id="my-page-wrapper" class="page-wrapper {{ slug }}">
+    <div id="my-page-wrapper" class="page-wrapper {{ SLUG }}">
       <div class="content-top">
         <div id="my-content-text" class="content-text">
           {{ content }}
@@ -16,21 +15,19 @@
       </div>
     </div>
 
-    {% include footer.html slug=slug %}
+    {% include footer.html slug=SLUG %}
 
   </body>
   <script type='text/javascript' src="{{ site.baseurl }}/js/times.js"></script>
   <script type='text/javascript' src="{{ site.baseurl }}/js/content.js"></script>
 
-  {% if slug == 'manual' or slug == 'info' %}
+  {% if SLUG == 'manual' or SLUG == 'info' %}
     <script type='text/javascript' src="{{ site.baseurl }}/js/fix-footer.js"></script>
-  {% elsif slug == 'este' or slug == 'oeste' or slug == 'cielo' or slug == 'suelo' %}
-    <script type='text/javascript' src="{{ site.baseurl }}/js/check-time.js"></script>
-  {% elsif slug == 'east' or slug == 'west' or slug == 'sky' or slug == 'ground' %}
+  {% elsif SLUG == 'este' or SLUG == 'oeste' or SLUG == 'cielo' or SLUG == 'suelo' %}
     <script type='text/javascript' src="{{ site.baseurl }}/js/check-time.js"></script>
   {% endif %}
 
-  {% if slug == 'manual' %}
+  {% if SLUG == 'manual' %}
     <script type='text/javascript' src="{{ site.baseurl }}/js/manual.js"></script>
   {% endif %}
 </html>
