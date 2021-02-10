@@ -1,7 +1,7 @@
 ---
 layout: content
 title: 'Ground'
-permalink: /en/ground/
+permalink: /en/soil/
 ---
 {% include vimeo.html id="508172761" %}
 

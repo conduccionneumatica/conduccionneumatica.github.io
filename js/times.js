@@ -4,7 +4,7 @@ layout: none
 
 const PAGES_AND_TIMES = {
   es: ['este', 'suelo', 'oeste', 'cielo'],
-  en: ['east', 'ground', 'west', 'sky']
+  en: ['east', 'soil', 'west', 'sky']
 };
 const PAGE_LANG = (window.location.href.includes('/en/')) ? 'en' : 'es';
 const PAGE_LANG_URL = (PAGE_LANG === 'en') ? '/en' : '';
